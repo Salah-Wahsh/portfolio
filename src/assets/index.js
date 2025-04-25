@@ -31,6 +31,7 @@ import tmg from "./company/tmg2.jpeg";
 import nbe from "./company/nbe.jpg";
 import codebase from "./company/codebase.jpeg";
 import siware from "./company/siware.png";
+import storktech from "./company/storktech.png";
 //projects
 import forum from "./forum.png";
 import circles from "./circlesWizard.png";
@@ -69,4 +70,5 @@ export {
   weatherNow,
   laravel,
   php,
+  storktech,
 };

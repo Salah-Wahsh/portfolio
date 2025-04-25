@@ -23,6 +23,7 @@ import {
   weatherNow,
   laravel,
   php,
+  storktech,
 } from "../assets";
 
 export const navLinks = [
@@ -118,15 +119,26 @@ const technologies = [
 
 const experiences = [
   {
+    title: "Full-Stack Developer",
+    company_name: "StorkTech",
+    icon: storktech,
+    iconBg: "#ffffff",
+    date: "Jan 2024 - Present",
+    points: [
+      "Designed and implemented REST APIs for frontend applications.",
+      "successfully integrated image compression mechanisms, reducing image sizes by 1000%, enhancing performance.",
+      "worked on Full-Stack apps using ReactJs, NestJs and postgresql.",
+    ],
+  },
+  {
     title: "Backend Developer",
     company_name: "Codebase",
     icon: codebase,
     iconBg: "#ed4e4b",
-    date: "Oct 2023 - Present",
+    date: "Oct 2023 - Dec 2023",
     points: [
-      "Developing web applications using Laravel and other related technologies.",
-      "Developing APIs for other frontend Applications.",
-      "Designing and Developing Databases Using MYSQL.",
+      "Developed web applications using Laravel and other related technologies.",
+      "Developed APIs for other frontend Applications.",
     ],
   },
   {
@@ -145,7 +157,7 @@ const experiences = [
     title: "Full Stack Developer",
     company_name: "Si-Ware Systems (SWS)",
     icon: siware,
-    iconBg: "#E6DEDD",
+    iconBg: "#ffffff",
     date: "August 2023 - September 2023",
     points: [
       "Developed Frontend Applications using React.",
@@ -167,7 +179,7 @@ const experiences = [
     title: "Cyber Security Engineer",
     company_name: "National Bank of Egypt (NBE)",
     icon: nbe,
-    iconBg: "#E6DEDD",
+    iconBg: "#ffffff",
     date: "July 2022 - August 2022",
     points: [
       "Demonstrated expertise in enhancing digital security through comprehensive understanding of endpoint security measures and encryption techniques.",
