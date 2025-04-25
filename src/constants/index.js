@@ -3,12 +3,8 @@ import {
   backend,
   creator,
   web,
-  javascript,
   typescript,
-  html,
-  css,
   reactjs,
-  redux,
   tailwind,
   nodejs,
   git,
@@ -22,8 +18,10 @@ import {
   circles,
   weatherNow,
   laravel,
-  php,
   storktech,
+  pg,
+  nestjs,
+  nextjs,
 } from "../assets";
 
 export const navLinks = [
@@ -62,33 +60,24 @@ const services = [
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "php",
-    icon: php,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
     name: "TypeScript",
     icon: typescript,
   },
-
   {
     name: "React JS",
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Nest JS",
+    icon: nestjs,
+  },
+  {
+    name: "Next JS",
+    icon: nextjs,
+  },
+  {
+    name: "PostgreSQL",
+    icon: pg,
   },
   {
     name: "Tailwind CSS",
@@ -98,11 +87,6 @@ const technologies = [
     name: "Node JS",
     icon: nodejs,
   },
-  {
-    name: "Laravel",
-    icon: laravel,
-  },
-
   {
     name: "Three JS",
     icon: threejs,
@@ -115,12 +99,16 @@ const technologies = [
     name: "docker",
     icon: docker,
   },
+  {
+    name: "Laravel",
+    icon: laravel,
+  },
 ];
 
 const experiences = [
   {
     title: "Full-Stack Developer",
-    company_name: "StorkTech",
+    company_name: "StorkTech - Part Time",
     icon: storktech,
     iconBg: "#ffffff",
     date: "Jan 2024 - Present",
@@ -132,7 +120,7 @@ const experiences = [
   },
   {
     title: "Backend Developer",
-    company_name: "Codebase",
+    company_name: "Codebase - Intern",
     icon: codebase,
     iconBg: "#ed4e4b",
     date: "Oct 2023 - Dec 2023",
@@ -143,7 +131,7 @@ const experiences = [
   },
   {
     title: "Smart Cities Engineer",
-    company_name: "Talaat Mostafa Group (TMG)",
+    company_name: "Talaat Mostafa Group (TMG) - Intern",
     icon: tmg,
     iconBg: "#00355f",
     date: "September 2023 - Oct 2023",
@@ -155,7 +143,7 @@ const experiences = [
   },
   {
     title: "Full Stack Developer",
-    company_name: "Si-Ware Systems (SWS)",
+    company_name: "Si-Ware Systems (SWS) - Intern",
     icon: siware,
     iconBg: "#ffffff",
     date: "August 2023 - September 2023",
@@ -167,7 +155,7 @@ const experiences = [
   },
   {
     title: "Frontend Developer",
-    company_name: "Codebase",
+    company_name: "Codebase - Intern",
     icon: codebase,
     iconBg: "#ed4e4b",
     date: "Mar 2022 - April 2022",
@@ -177,7 +165,7 @@ const experiences = [
   },
   {
     title: "Cyber Security Engineer",
-    company_name: "National Bank of Egypt (NBE)",
+    company_name: "National Bank of Egypt (NBE) - Intern",
     icon: nbe,
     iconBg: "#ffffff",
     date: "July 2022 - August 2022",

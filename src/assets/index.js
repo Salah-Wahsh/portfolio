@@ -15,10 +15,12 @@ import javascript from "./tech/javascript.png";
 
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
+import pg from "./tech/pg.png";
+import nestjs from "./tech/nestjs.png";
+import nextjs from "./tech/nextjs.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+import threejs from "./tech/threejs.png";
 import laravel from "./tech/laravel.svg";
 import php from "./tech/php.png";
 
@@ -53,7 +55,6 @@ export {
   javascript,
   nodejs,
   reactjs,
-  redux,
   tailwind,
   typescript,
   threejs,
@@ -71,4 +72,7 @@ export {
   laravel,
   php,
   storktech,
+  pg,
+  nextjs,
+  nestjs,
 };

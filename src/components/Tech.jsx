@@ -9,7 +9,7 @@ const Tech = () => {
   return (
     <div className="flex flex-row flex-wrap justify-center gap-12">
       {isMobileView
-        ? technologies.slice(3, 13).map((technology) => (
+        ? technologies.slice(0, 4).map((technology) => (
             <div className="w-28 h-28 text-center" key={technology.name}>
               <BallCanvas icon={technology.icon} />
               <h3 className="mt-1">{technology.name}</h3>
