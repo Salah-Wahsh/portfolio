@@ -1,4 +1,3 @@
-import React from "react";
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
@@ -7,53 +6,73 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
-//template_ekx74io
-//service: service_wxr4c6c
-//pk: YYF8ns78ADmgb8d99
+import { toast } from "react-toastify";
+
 const Contact = () => {
-  const forRef = useRef();
+  const formRef = useRef();
+
   const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",
   });
-
+  const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     setForm({ ...form, [name]: value });
   };
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!form.name.trim()) newErrors.name = "Name is required";
+    if (!form.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^\S+@\S+\.\S+$/.test(form.email)) {
+      newErrors.email = "Email is invalid";
+    }
+    if (!form.message.trim()) newErrors.message = "Message is required";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!validateForm()) return;
+
     setLoading(true);
     emailjs
       .send(
-        "service_wxr4c6c",
-        "template_ekx74io",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Salah",
+          to_name: import.meta.env.VITE_EMAILJS_RECEIVER_NAME,
           from_email: form.email,
-          to_email: "salahwahsh12@gmail.com",
+          to_email: import.meta.env.VITE_EMAILJS_RECEIVER_EMAIL,
           message: form.message,
         },
-        "YYF8ns78ADmgb8d99"
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
+
       .then(
         () => {
           setLoading(false);
-          setForm({
-            name: "",
-            email: "",
-            message: "",
+          setForm({ name: "", email: "", message: "" });
+          toast("Message sent successfully! I'll get back to you soon.", {
+            theme: "dark",
+            type: "success",
           });
-          alert("Message sent successfully! I'll get back to you soon.");
         },
         (error) => {
           setLoading(false);
-          console.log(error.text);
-          alert("Something went wrong. Please try again.");
+          console.log(error);
+          toast("Something went wrong, please try again later.", {
+            theme: "dark",
+            type: "error",
+          });
         }
       );
   };
@@ -67,8 +86,9 @@ const Contact = () => {
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
         <form
-          // ref={formRef}
+          ref={formRef}
           onSubmit={handleSubmit}
+          noValidate
           className="mt-12 flex flex-col gap-8"
         >
           <label className="flex flex-col">
@@ -81,6 +101,11 @@ const Contact = () => {
               placeholder="What's your name?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
+            {errors.name && (
+              <span style={{ color: "darkred", margin: "10px 4px" }}>
+                {errors.name}
+              </span>
+            )}
           </label>
 
           <label className="flex flex-col">
@@ -92,7 +117,13 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="What's your email?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+              required
             />
+            {errors.email && (
+              <span style={{ color: "darkred", margin: "10px 4px" }}>
+                {errors.email}
+              </span>
+            )}
           </label>
 
           <label className="flex flex-col">
@@ -105,6 +136,11 @@ const Contact = () => {
               placeholder="How can I help?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
+            {errors.message && (
+              <span style={{ color: "darkred", margin: "10px 4px" }}>
+                {errors.message}
+              </span>
+            )}
           </label>
 
           <button

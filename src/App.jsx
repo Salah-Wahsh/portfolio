@@ -10,6 +10,7 @@ import {
   Works,
   StarsCanvas,
 } from "./components";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   return (
@@ -23,6 +24,8 @@ const App = () => {
         <Experience />
         <Tech />
         <div className="relative z-0">
+          <ToastContainer className={"mt-20"} />
+
           <Works />
           {/* <Feedbacks /> */}
           <Contact />
