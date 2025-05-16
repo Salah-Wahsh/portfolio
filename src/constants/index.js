@@ -22,6 +22,7 @@ import {
   pg,
   nestjs,
   nextjs,
+  aast,
 } from "../assets";
 
 export const navLinks = [
@@ -45,15 +46,15 @@ const services = [
     icon: web,
   },
   {
-    title: "Passionate Pen Tester",
+    title: "Teaching Assistant",
     icon: mobile,
   },
   {
-    title: "Graphic Designer",
+    title: "CyberSecurity Enthusiast",
     icon: backend,
   },
   {
-    title: "Video Editor",
+    title: "Passionate Video Editor",
     icon: creator,
   },
 ];
@@ -99,10 +100,6 @@ const technologies = [
     name: "docker",
     icon: docker,
   },
-  {
-    name: "Laravel",
-    icon: laravel,
-  },
 ];
 
 const experiences = [
@@ -113,9 +110,22 @@ const experiences = [
     iconBg: "#ffffff",
     date: "Jan 2024 - Present",
     points: [
-      "Designed and implemented REST APIs for frontend applications.",
-      "successfully integrated image compression mechanisms, reducing image sizes by 1000%, enhancing performance.",
-      "worked on Full-Stack apps using ReactJs, NestJs and postgresql.",
+      "Built and maintained Full-Stack applications using TypeScript, React.js, NestJS, and PostgreSQL.",
+      "Designed and implemented scalable RESTful APIs to support robust and responsive frontend features.",
+      "Tackled niche technical challenges, such as implementing custom image compression workflows that reduced image sizes by over 90%, significantly improving performance.",
+    ],
+  },
+  {
+    title: "Teaching Assistant",
+    company_name:
+      "Arab Academy for Science, Technology and Maritime Transport - Part Time",
+    icon: aast,
+    iconBg: "#ffffff",
+    date: "Sep 2024 - Jan 2025",
+    points: [
+      "Assisted in delivering core topics such as secure coding practices, common vulnerabilities (e.g., XSS, SQL Injection), threat modeling, and application hardening techniques.",
+      "Guided and mentored students through hands-on labs, debugging security flaws in code, and understanding real-world attack scenarios.",
+      "Graded assignments and exams and supported students in understanding complex security concepts to improve their practical skills.",
     ],
   },
   {

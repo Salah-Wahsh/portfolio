@@ -34,6 +34,7 @@ import nbe from "./company/nbe.jpg";
 import codebase from "./company/codebase.jpeg";
 import siware from "./company/siware.png";
 import storktech from "./company/storktech.png";
+import aast from "./company/aast.png";
 //projects
 import forum from "./forum.png";
 import circles from "./circlesWizard.png";
@@ -75,4 +76,5 @@ export {
   pg,
   nextjs,
   nestjs,
+  aast,
 };
